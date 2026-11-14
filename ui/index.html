@@ -46,12 +46,22 @@
             <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">Agentic RAG Assistant</span>
             <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Day 7 Lab</span>
           </div>
-          <p class="text-xs text-zinc-400">Sổ tay sinh viên Khóa 67 — VNUA</p>
+          <p id="docSubtitle" class="text-xs text-zinc-400">Sổ tay sinh viên Khóa 67 — VNUA</p>
         </div>
       </div>
 
-      <!-- Controls: Model & Retriever Switcher -->
+      <!-- Controls: Dataset, Model & Retriever Switcher -->
       <div class="flex items-center gap-3">
+        <!-- Switch Knowledge Base Dropdown -->
+        <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 shadow-sm">
+          <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i>
+          <label class="text-xs text-zinc-400">Tài liệu:</label>
+          <select id="datasetSelect" onchange="onDatasetChange()" class="bg-transparent text-xs font-semibold text-zinc-200 focus:outline-none cursor-pointer">
+            <option value="k67" class="bg-zinc-900" selected>🎓 Sổ tay SV K67 (Day 7)</option>
+            <option value="vinamilk" class="bg-zinc-900">🥛 Vinamilk BCTN (15đ Bonus)</option>
+          </select>
+        </div>
+
         <!-- Switch Model Dropdown -->
         <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 shadow-sm">
           <i data-lucide="cpu" class="w-4 h-4 text-emerald-400"></i>
@@ -269,24 +279,46 @@
       }
     }
 
+    // Switch Dataset (Knowledge Base)
+    function onDatasetChange() {
+      const ds = document.getElementById('datasetSelect').value;
+      const subtitle = document.getElementById('docSubtitle');
+      if (subtitle) {
+        subtitle.innerText = ds === 'vinamilk' ? 'Báo cáo Thường niên Vinamilk 2021 (121 trang)' : 'Sổ tay sinh viên Khóa 67 — VNUA';
+      }
+      loadSamples(ds);
+      clearChat();
+    }
+
     // Load sample questions
-    async function loadSamples() {
+    async function loadSamples(dataset = 'k67') {
       try {
-        const resp = await fetch('/api/samples');
+        const resp = await fetch(`/api/samples?dataset=${dataset}`);
         const samples = await resp.json();
         const container = document.getElementById('samplesContainer');
         container.innerHTML = '';
         document.getElementById('sampleCount').innerText = `${samples.length} câu`;
 
+        const catNames = {
+          'table': 'Bảng số liệu',
+          'chart': 'Biểu đồ',
+          'diagram': 'Sơ đồ',
+          'multi_hop': 'Multi-hop',
+          'text': 'Văn bản',
+          'unanswerable': 'Bẫy từ chối'
+        };
+
         samples.forEach(s => {
           const item = document.createElement('div');
           item.className = "p-2.5 rounded-xl bg-zinc-950/60 hover:bg-zinc-800/60 border border-zinc-800/50 cursor-pointer transition text-xs text-zinc-300 group";
           const isAnswerable = s.answerable !== false;
+          const catTag = catNames[s.category] || (isAnswerable ? 'Có đáp án' : 'Bẫy từ chối');
+          
           item.innerHTML = `
             <div class="flex items-center justify-between mb-1">
               <span class="font-mono text-[10px] text-zinc-500">${s.id}</span>
               <span class="text-[9px] px-1.5 py-0.2 rounded ${isAnswerable ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'} font-medium">
-                ${isAnswerable ? 'Có đáp án' : 'Bẫy từ chối'}
+                ${catTag}
               </span>
             </div>
             <p class="line-clamp-2 group-hover:text-white">${s.question}</p>
@@ -321,6 +353,7 @@
       const q = input.value.trim();
       if (!q) return;
 
+      const dataset = document.getElementById('datasetSelect').value;
       const model = document.getElementById('modelSelect').value;
       const retriever = document.getElementById('retrieverSelect').value;
       const sendBtn = document.getElementById('sendBtn');
@@ -340,7 +373,7 @@
         const resp = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question: q, model, retriever, budget: 1500, top_k: 5 })
+          body: JSON.stringify({ question: q, dataset, model, retriever, budget: 1500, top_k: 5 })
         });
         const data = await resp.json();
         removeLoading(loadingId);
@@ -442,6 +475,7 @@
                 ${badgeHtml}
                 <span class="text-xs px-2.5 py-0.5 rounded-md bg-zinc-900 border border-zinc-700 text-teal-300 font-mono font-medium">${data.model_used || 'Gemini 2.5 Flash'}</span>
                 <span class="text-xs px-2.5 py-0.5 rounded-md bg-zinc-900 border border-zinc-700 text-purple-300 font-mono font-medium">${data.retriever_used || 'Hybrid (Dense + BM25 RRF)'}</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-md bg-zinc-900 border border-amber-500/30 text-amber-300 font-mono font-medium">${data.dataset_used ? data.dataset_used.split('(')[0].trim() : 'Sổ tay K67'}</span>
               </div>
               <span class="text-xs text-zinc-400 font-mono flex items-center gap-1">
                 <i data-lucide="clock" class="w-3.5 h-3.5 text-zinc-500"></i> ${latency} ms

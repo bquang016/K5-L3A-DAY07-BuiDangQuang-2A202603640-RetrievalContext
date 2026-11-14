@@ -3,8 +3,11 @@ import json
 import time
 from typing import Dict, Any, List, Optional
 from pathlib import Path
+from dotenv import load_dotenv
 from openai import OpenAI
 from src.advanced.retrievers import AdvancedHybridRetriever
+
+load_dotenv()
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
