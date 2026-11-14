@@ -42,8 +42,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 2/2).",
-      "latency_tool_ms": 9.7,
-      "latency_total_ms": 1717.67
+      "latency_tool_ms": 9.86,
+      "latency_total_ms": 1636.53
     },
     {
       "id": "adv_test_02",
@@ -57,8 +57,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.90, Số liệu: 6/6).",
-      "latency_tool_ms": 9.49,
-      "latency_total_ms": 1388.71
+      "latency_tool_ms": 10.26,
+      "latency_total_ms": 1307.32
     },
     {
       "id": "adv_test_03",
@@ -68,12 +68,12 @@
       "gold_answer": "EPS năm 2020 của Vinamilk đạt 4.770 đồng.",
       "gold_page": 10,
       "gold_chunk_id": "vnm_p010_c00",
-      "agent_answer": "Status: ANSWER\nContent: Theo bảng chỉ tiêu tài chính, Lãi cơ bản trên một cổ phiếu (EPS) của Vinamilk năm 2020 đạt mức 4.770 đồng [vnm_p010_c00].\nCitations: vnm_p010_c00",
+      "agent_answer": "Status: ANSWER\nContent: Theo bảng chỉ tiêu tài chính, Lãi cơ bản trên một cổ phiếu (EPS) của Vinamilk năm 2020 đạt mức 4.770 đồng [vnm_p010_c00].\nCitations: [vnm_p010_c00]",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 2/2).",
-      "latency_tool_ms": 9.75,
-      "latency_total_ms": 1223.59
+      "latency_tool_ms": 11.68,
+      "latency_total_ms": 1275.13
     },
     {
       "id": "adv_test_04",
@@ -83,12 +83,12 @@
       "gold_answer": "Lợi nhuận phân bổ cho chủ sở hữu năm 2021 là 10.532 tỷ đồng.",
       "gold_page": 10,
       "gold_chunk_id": "vnm_p010_c00",
-      "agent_answer": "Status: ANSWER\nContent: Lợi nhuận phân bổ cho chủ sở hữu của Công ty Vinamilk năm 2021 đạt 10.532 tỷ đồng. [vnm_p010_c00 - Trang 10]\nCitations: vnm_p010_c00",
+      "agent_answer": "Status: ANSWER\nContent: Lợi nhuận phân bổ cho chủ sở hữu của Công ty Vinamilk năm 2021 đạt 10.532 tỷ đồng. [vnm_p010_c00]\nCitations: [vnm_p010_c00]",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.93, Số liệu: 2/2).",
-      "latency_tool_ms": 9.12,
-      "latency_total_ms": 1174.03
+      "latency_tool_ms": 8.62,
+      "latency_total_ms": 1115.04
     },
     {
       "id": "adv_test_05",
@@ -102,8 +102,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 2/2).",
-      "latency_tool_ms": 13.18,
-      "latency_total_ms": 1236.54
+      "latency_tool_ms": 12.73,
+      "latency_total_ms": 1160.87
     },
     {
       "id": "adv_test_06",
@@ -117,8 +117,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 2/2).",
-      "latency_tool_ms": 9.88,
-      "latency_total_ms": 1244.1
+      "latency_tool_ms": 12.36,
+      "latency_total_ms": 1133.12
     },
     {
       "id": "adv_test_07",
@@ -128,12 +128,12 @@
       "gold_answer": "Vinamilk nắm giữ 22,81% vốn tại Miraka Limited.",
       "gold_page": 15,
       "gold_chunk_id": "vnm_p015_c01",
-      "agent_answer": "Status: ANSWER\nContent: Theo sơ đồ mạng lưới hoạt động của Vinamilk, công ty Miraka Limited (tên đầy đủ là Miraka Holdings Limited) tại New Zealand do Vinamilk nắm giữ 22,81% vốn. [vnm_p093_c01]\nCitations: vnm_p093_c01",
+      "agent_answer": "Status: ANSWER\nContent: Theo sơ đồ mạng lưới hoạt động của Vinamilk, công ty Miraka Limited (tên đầy đủ là Miraka Holdings Limited) tại New Zealand do Vinamilk nắm giữ 22,81% vốn đầu tư [vnm_p093_c01]. Vinamilk bắt đầu đầu tư vào công ty Miraka Limited vào năm 2010 và tăng vốn đầu tư lên 22,81% vào năm 2015 [vnm_p012_c03].\nCitations: [vnm_p012_c03], [vnm_p093_c01]",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 1/1).",
-      "latency_tool_ms": 20.34,
-      "latency_total_ms": 1325.01
+      "latency_tool_ms": 9.93,
+      "latency_total_ms": 1530.21
     },
     {
       "id": "adv_test_08",
@@ -143,12 +143,12 @@
       "gold_answer": "Vinamilk có 3 chi nhánh văn phòng bán hàng tại Việt Nam (Hà Nội, Đà Nẵng, Cần Thơ).",
       "gold_page": 15,
       "gold_chunk_id": "vnm_p015_c00",
-      "agent_answer": "Status: ANSWER\nContent: Theo sơ đồ đơn vị trực thuộc, Vinamilk có 03 chi nhánh văn phòng bán hàng tại Việt Nam, bao gồm: Hà Nội, Đà Nẵng và Cần Thơ [vnm_p015_c00].\nCitations: vnm_p015_c00",
+      "agent_answer": "Status: ANSWER\nContent: Theo sơ đồ đơn vị trực thuộc, Vinamilk có 03 chi nhánh văn phòng bán hàng tại Việt Nam, đặt tại Hà Nội, Đà Nẵng và Cần Thơ [vnm_p015_c00].\nCitations: vnm_p015_c00",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.94, Số liệu: 1/1).",
-      "latency_tool_ms": 9.03,
-      "latency_total_ms": 1676.56
+      "latency_tool_ms": 11.21,
+      "latency_total_ms": 1182.85
     },
     {
       "id": "adv_test_09",
@@ -162,8 +162,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 1/1).",
-      "latency_tool_ms": 8.76,
-      "latency_total_ms": 1109.18
+      "latency_tool_ms": 8.47,
+      "latency_total_ms": 1144.44
     },
     {
       "id": "adv_test_10",
@@ -177,8 +177,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 1/1).",
-      "latency_tool_ms": 9.26,
-      "latency_total_ms": 1597.53
+      "latency_tool_ms": 8.92,
+      "latency_total_ms": 1101.64
     },
     {
       "id": "adv_test_11",
@@ -192,8 +192,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 1/1).",
-      "latency_tool_ms": 9.22,
-      "latency_total_ms": 1148.84
+      "latency_tool_ms": 8.58,
+      "latency_total_ms": 1175.58
     },
     {
       "id": "adv_test_12",
@@ -207,8 +207,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 1/1).",
-      "latency_tool_ms": 9.11,
-      "latency_total_ms": 1449.68
+      "latency_tool_ms": 9.02,
+      "latency_total_ms": 1277.92
     },
     {
       "id": "adv_test_13",
@@ -222,8 +222,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.92, Số liệu: 0/1).",
-      "latency_tool_ms": 9.15,
-      "latency_total_ms": 1261.72
+      "latency_tool_ms": 8.55,
+      "latency_total_ms": 1177.35
     },
     {
       "id": "adv_test_14",
@@ -233,12 +233,12 @@
       "gold_answer": "EBITDA năm 2020 đạt 15.871 tỷ đồng.",
       "gold_page": 10,
       "gold_chunk_id": "vnm_p010_c00",
-      "agent_answer": "Status: ANSWER\nContent: Theo số liệu tài chính, chỉ số EBITDA của Vinamilk năm 2020 đạt mức 15.871 tỷ đồng [vnm_p010_c00].\nCitations: [vnm_p10_c00]",
+      "agent_answer": "Status: ANSWER\nContent: Theo số liệu tài chính, chỉ số EBITDA của Vinamilk năm 2020 đạt mức 15.871 tỷ đồng [vnm_p010_c00].\nCitations: [vnm_p010_c00]",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 2/2).",
-      "latency_tool_ms": 9.32,
-      "latency_total_ms": 1470.45
+      "latency_tool_ms": 11.63,
+      "latency_total_ms": 1201.52
     },
     {
       "id": "adv_test_15",
@@ -252,8 +252,8 @@
       "is_abstain": true,
       "passed": false,
       "reason": "Thất bại: Từ chối nhầm (False Abstain) dù tài liệu có thông tin.",
-      "latency_tool_ms": 10.63,
-      "latency_total_ms": 1067.53
+      "latency_tool_ms": 8.61,
+      "latency_total_ms": 1017.7
     },
     {
       "id": "adv_test_16",
@@ -267,8 +267,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.86, Số liệu: 2/2).",
-      "latency_tool_ms": 7.92,
-      "latency_total_ms": 1112.59
+      "latency_tool_ms": 7.6,
+      "latency_total_ms": 1129.21
     },
     {
       "id": "adv_test_17",
@@ -278,12 +278,12 @@
       "gold_answer": "Ra mắt 2 sản phẩm là sữa đậu xanh và sữa bắp thương hiệu Oh Fresh, phân phối qua siêu thị, minimart, tạp hóa, quán ăn và thương mại điện tử.",
       "gold_page": 50,
       "gold_chunk_id": "vnm_p050_c00",
-      "agent_answer": "Status: ANSWER\nContent: Vinamilk và đối tác KIDO đã ra mắt 2 sản phẩm nước tươi dưới thương hiệu Oh Fresh là sữa đậu xanh và sữa bắp. [vnm_p050_c00]\n\nCác sản phẩm Oh Fresh đang và sẽ được bày bán tại các hệ thống phân phối toàn quốc của Vinamilk và KIDO, bao gồm:\n*   Hệ thống các siêu thị, minimart.\n*   Các điểm bán hàng tạp hóa.\n*   Các quán ăn.\n*   Trang thương mại điện tử. [vnm_p050_c00]\n\nHiện tại, Oh Fresh đã phủ rộng tại hàng chục nghìn điểm tạp hóa, quán ăn, siêu thị và cửa hàng tiện lợi tại khu vực phía Nam và miền Trung. Dự kiến, tháng 3/2022 sẽ tiếp tục mở rộng đến khu vực phía Bắc và phủ khắp toàn quốc thông qua gần 100 nhà phân phối và đối tác. [vnm_p050_c01]\nCitations: vnm_p050_c00, vnm_p050_c01",
+      "agent_answer": "Status: ANSWER\nContent: Vinamilk và đối tác CTCP Tập đoàn KIDO đã ra mắt 2 sản phẩm nước tươi dưới thương hiệu Oh Fresh là sữa đậu xanh và sữa bắp. [vnm_p050_c00]\n\nCác sản phẩm Oh Fresh đang và sẽ được bày bán tại các hệ thống phân phối toàn quốc của Vinamilk và KIDO, bao gồm:\n*   Hệ thống các siêu thị, minimart.\n*   Các điểm bán hàng tạp hóa.\n*   Các quán ăn.\n*   Trang thương mại điện tử. [vnm_p050_c00]\n\nChỉ sau 02 tháng ra mắt thị trường, Oh Fresh đã phủ rộng tại hàng chục nghìn điểm tạp hóa, quán ăn, siêu thị và cửa hàng tiện lợi tại khu vực phía Nam và khu vực miền Trung. Dự kiến, tháng 3/2022 sẽ tiếp tục mở rộng đến khu vực phía Bắc và phủ khắp toàn quốc thông qua gần 100 nhà phân phối và đối tác. [vnm_p050_c01]\nCitations: vnm_p050_c00, vnm_p050_c01",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 1/1).",
-      "latency_tool_ms": 9.98,
-      "latency_total_ms": 1984.69
+      "latency_tool_ms": 10.35,
+      "latency_total_ms": 2053.48
     },
     {
       "id": "adv_test_18",
@@ -297,8 +297,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.75, Số liệu: 0/0).",
-      "latency_tool_ms": 10.03,
-      "latency_total_ms": 1461.72
+      "latency_tool_ms": 14.32,
+      "latency_total_ms": 1360.95
     },
     {
       "id": "adv_test_19",
@@ -312,8 +312,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.94, Số liệu: 2/2).",
-      "latency_tool_ms": 9.84,
-      "latency_total_ms": 1311.6
+      "latency_tool_ms": 8.43,
+      "latency_total_ms": 1295.9
     },
     {
       "id": "adv_test_20",
@@ -323,12 +323,12 @@
       "gold_answer": "Quản lý khai thác đàn bò hơn 160.000 con cùng 14 trang trại bò sữa đạt chuẩn quốc tế.",
       "gold_page": 9,
       "gold_chunk_id": "vnm_p009_c00",
-      "agent_answer": "Status: ANSWER\nContent: Tính đến ngày 31/12/2021, Vinamilk và các đơn vị thành viên đang vận hành 14 trang trại bò sữa tại Việt Nam với tổng đàn khai thác hơn 160.000 con [vnm_p038_c01].\n\nTrong đó:\n*   Công ty BSVN quản lý 11 trang trại với tổng đàn là 26.000 con [vnm_p038_c01].\n*   Công ty BS TNTH quản lý 02 trang trại với tổng đàn khoảng 8.000 con [vnm_p038_c01].\n*   Các hộ nông dân đối tác với tổng đàn khoảng 100.000 con [vnm_p038_c01].\n*   Mộc Châu Milk hiện sở hữu đàn bò sữa hơn 2.000 con tại trang trại và 25.000 con thông qua việc liên kết [vnm_p038_c01].\n\nTất cả 100% trang trại và trung tâm bò sữa của Vinamilk tại Việt Nam đã đạt chứng nhận ISO 9001:2015 và được chứng nhận thành công tiêu chuẩn thực hành nông nghiệp tốt toàn cầu [vnm_p044_c01].\nCitations: vnm_p038_c01, vnm_p044_c01",
+      "agent_answer": "Status: ANSWER\nContent: Tính đến ngày 31/12/2021, Vinamilk và các đơn vị thành viên đang vận hành 14 trang trại bò sữa tại Việt Nam với tổng đàn khai thác hơn 160.000 con [vnm_p038_c01].\n\nTrong đó:\n*   Công ty BSVN quản lý 11 trang trại với tổng đàn là 26.000 con [vnm_p038_c01].\n*   Công ty BS TNTH quản lý 02 trang trại với tổng đàn khoảng 8.000 con [vnm_p038_c01].\n*   Các hộ nông dân đối tác với tổng đàn khoảng 100.000 con [vnm_p038_c01].\n*   Mộc Châu Milk hiện sở hữu đàn bò sữa hơn 2.000 con tại trang trại và 25.000 con thông qua việc liên kết [vnm_p038_c01].\n\nTính đến năm 2021, 100% trang trại và trung tâm bò sữa của Vinamilk tại Việt Nam đạt chứng nhận ISO 9001:2015 và được chứng nhận thành công tiêu chuẩn thực hành nông nghiệp tốt toàn cầu [vnm_p044_c01].\nCitations: [vnm_p038_c01], [vnm_p044_c01]",
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.84, Số liệu: 2/2).",
-      "latency_tool_ms": 10.52,
-      "latency_total_ms": 2108.55
+      "latency_tool_ms": 10.5,
+      "latency_total_ms": 2228.29
     },
     {
       "id": "adv_test_21",
@@ -342,8 +342,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 2/2).",
-      "latency_tool_ms": 10.2,
-      "latency_total_ms": 1307.36
+      "latency_tool_ms": 8.38,
+      "latency_total_ms": 1289.53
     },
     {
       "id": "adv_test_22",
@@ -357,8 +357,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 3/3).",
-      "latency_tool_ms": 9.12,
-      "latency_total_ms": 1307.75
+      "latency_tool_ms": 9.42,
+      "latency_total_ms": 1312.19
     },
     {
       "id": "adv_test_23",
@@ -372,8 +372,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 1.00, Số liệu: 0/0).",
-      "latency_tool_ms": 9.21,
-      "latency_total_ms": 1442.43
+      "latency_tool_ms": 8.45,
+      "latency_total_ms": 1537.6
     },
     {
       "id": "adv_test_24",
@@ -387,8 +387,8 @@
       "is_abstain": false,
       "passed": true,
       "reason": "Đạt: Trả lời đúng trọng tâm và có căn cứ (Overlap: 0.86, Số liệu: 1/1).",
-      "latency_tool_ms": 13.98,
-      "latency_total_ms": 1549.52
+      "latency_tool_ms": 12.05,
+      "latency_total_ms": 1352.61
     },
     {
       "id": "adv_test_25",
@@ -398,12 +398,12 @@
       "gold_answer": "Tài liệu Báo cáo thường niên Vinamilk 2021 không có thông tin về việc mua bản quyền thương hiệu Chobani.",
       "gold_page": 0,
       "gold_chunk_id": "",
-      "agent_answer": "Status: ABSTAIN\nContent: Tài liệu Báo cáo thường niên Vinamilk 2021 không cung cấp thông tin về chi phí mua bản quyền thương hiệu sữa chua Hy Lạp Chobani tại thị trường Mỹ của Vinamilk năm 2021.\nCitations: []",
+      "agent_answer": "Status: ABSTAIN\nContent: Tài liệu Báo cáo thường niên Vinamilk 2021 không cung cấp thông tin về chi phí mua bản quyền thương hiệu sữa chua Hy Lạp Chobani tại thị trường Mỹ của Vinamilk năm 2021.",
       "is_abstain": true,
       "passed": true,
       "reason": "Abstain chuẩn xác khi câu hỏi thiếu bằng chứng trong tài liệu.",
-      "latency_tool_ms": 12.05,
-      "latency_total_ms": 1184.39
+      "latency_tool_ms": 9.56,
+      "latency_total_ms": 1216.9
     },
     {
       "id": "adv_test_26",
@@ -417,8 +417,8 @@
       "is_abstain": true,
       "passed": true,
       "reason": "Abstain chuẩn xác khi câu hỏi thiếu bằng chứng trong tài liệu.",
-      "latency_tool_ms": 10.33,
-      "latency_total_ms": 1109.26
+      "latency_tool_ms": 11.84,
+      "latency_total_ms": 1176.83
     },
     {
       "id": "adv_test_27",
@@ -432,8 +432,8 @@
       "is_abstain": true,
       "passed": true,
       "reason": "Abstain chuẩn xác khi câu hỏi thiếu bằng chứng trong tài liệu.",
-      "latency_tool_ms": 10.65,
-      "latency_total_ms": 1587.29
+      "latency_tool_ms": 7.49,
+      "latency_total_ms": 1064.91
     },
     {
       "id": "adv_test_28",
@@ -447,8 +447,8 @@
       "is_abstain": true,
       "passed": true,
       "reason": "Abstain chuẩn xác khi câu hỏi thiếu bằng chứng trong tài liệu.",
-      "latency_tool_ms": 9.15,
-      "latency_total_ms": 1201.5
+      "latency_tool_ms": 9.21,
+      "latency_total_ms": 1123.58
     },
     {
       "id": "adv_test_29",
@@ -462,8 +462,8 @@
       "is_abstain": true,
       "passed": true,
       "reason": "Abstain chuẩn xác khi câu hỏi thiếu bằng chứng trong tài liệu.",
-      "latency_tool_ms": 10.45,
-      "latency_total_ms": 1167.22
+      "latency_tool_ms": 9.75,
+      "latency_total_ms": 1152.02
     },
     {
       "id": "adv_test_30",
@@ -477,8 +477,8 @@
       "is_abstain": true,
       "passed": true,
       "reason": "Abstain chuẩn xác khi câu hỏi thiếu bằng chứng trong tài liệu.",
-      "latency_tool_ms": 8.49,
-      "latency_total_ms": 1156.05
+      "latency_tool_ms": 8.73,
+      "latency_total_ms": 1222.68
     }
   ]
 }
