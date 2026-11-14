@@ -10,12 +10,16 @@
 ## 1. Dữ liệu và benchmark
 
 ### 1.1. Nguồn, quyền sử dụng, số trang và số chunk
-- **Tài liệu nguồn:** *Sổ tay sinh viên Khóa 67* — Học viện Nông nghiệp Việt Nam (`data/so_tay_sinh_vien_k67.pdf`).
+- **Tài liệu nguồn:** *Sổ tay sinh viên Khóa 67* — Học viện Nông nghiệp Việt Nam (VNUA).
+- **Nguồn công bố trực tuyến trên Internet:**
+  - Cổng thông tin Đào tạo VNUA: [daotao.vnua.edu.vn](https://daotao.vnua.edu.vn)
+  - Cổng thông tin Công tác sinh viên VNUA: [ctsv.vnua.edu.vn](https://ctsv.vnua.edu.vn) (Công văn và tài liệu phát hành chính thức cho sinh viên khóa K67).
+  - Tệp lưu trữ trong kho mã nguồn: `data/so_tay_sinh_vien_k67.pdf`.
 - **Quyền sử dụng:** Tài liệu ban hành công khai phục vụ tra cứu học tập, được sử dụng cho mục đích học thuật và nghiên cứu kỹ thuật theo quy chế bài cá nhân.
 - **Quy mô và quy tắc tính trang:** 
   - Tổng số trang vật lý: 136 trang.
   - Vùng dữ liệu trọng tâm nạp vào pipeline: 74 trang nội dung (từ trang 6 đến 46 về Quy chế đào tạo tín chỉ và trang 83 đến 115 về Công tác sinh viên, Khen thưởng, Kỷ luật và Đánh giá rèn luyện).
-- **Chiến lược chunking & số chunk:** Sử dụng chiến lược **Strategy B (Paragraph/Semantic-boundary Chunking)** kế thừa từ Day 6: cắt theo ranh giới ngữ nghĩa tự nhiên của điều khoản (`\n\n`, các điều khoản `Điều \d+`), giới hạn tối đa 800 ký tự/chunk, overlap = 0. Tổng cộng xuất ra **255 chunks** chuẩn hóa lưu tại `data/chunks.json`.
+- **Chiến lược chunking & số chunk:** Sử dụng chiến lược **Strategy B (Paragraph/Semantic-boundary Chunking)** kế thừa từ Day 6: cắt theo ranh giới ngữ nghĩa tự nhiên của điều khoản (`\n\n`, các điều khoản `Điều \d+`), giới hạn tối đa 800 ký tự/chunk, overlap = 0. Tổng cộng xuất ra **255 chunks** chuẩn hóa lưu tại [data/chunks.json](../../data/chunks.json).
 
 ### 1.2. Vector store, embedding model, phiên bản và số chiều
 - **Embedding Model:** `openai/text-embedding-3-small` (1536 chiều) thông qua OpenRouter API.
@@ -27,8 +31,8 @@
 ### 1.3. Agent model, cách chạy và phân chia dev/test
 - **Agent Models:** Hỗ trợ chuyển đổi động (Dynamic Model Switcher):
   - Model chính thức: **Gemini 2.5 Flash** (`google/gemini-2.5-flash`) qua OpenRouter Gateway — tối ưu tốc độ và tuân thủ chặt chẽ nguyên tắc Zero-Hallucination.
-  - Model đối chứng: **GPT-4o Mini** (`openai/gpt-4o-mini`), **Llama 3.3 70B** (`meta-llama/llama-3.3-70b-instruct`), và **Qwen 3.8 27B** qua Groq Cloud LPU.
-- **Bộ Benchmark:** Mở rộng lên **35 câu hỏi** (lưu tại `data/benchmark_questions.json`):
+  - Model đối chứng: **GPT-4o Mini** (`openai/gpt-4o-mini`), **Llama 3.3 70B** (`meta-llama/llama-3.3-70b-instruct`), và **Qwen 2.5 32B** qua Groq Cloud LPU.
+- **Bộ Benchmark:** Mở rộng lên **35 câu hỏi** (lưu tại [data/benchmark_questions.json](../../data/benchmark_questions.json)):
   - **Tập Dev (25 câu):** Gồm 20 câu có đáp án (`q01`–`q15`, `q21`–`q25`) và 5 câu thiếu bằng chứng (`q26`–`q30`). Dùng để thử nghiệm các cấu hình và phân tích lỗi.
   - **Tập Test (10 câu):** Gồm 8 câu có đáp án (`q16`–`q20`, `q31`–`q33`) và 2 câu thiếu bằng chứng (`q34`–`q35`). Đánh giá độc lập sau khi chốt cấu hình.
 
@@ -102,13 +106,13 @@ Chọn **Cấu hình Cải thiện 2 (Hybrid RRF, Top-K=5, Budget=1500)** làm p
 ## 4. Đường dẫn Artifacts, Khả năng tái lập và Giới hạn
 
 ### 4.1. Đường dẫn lưu trữ kết quả thực nghiệm
-- File câu hỏi Benchmark: [data/benchmark_questions.json](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/data/benchmark_questions.json)
-- File Chunks trích xuất: [data/chunks.json](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/data/chunks.json)
-- Kết quả Retrieval Baseline: [results/retrieval_dev_baseline.json](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/results/retrieval_dev_baseline.json)
-- Kết quả Thử nghiệm Cải thiện: [results/retrieval_improvements.json](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/results/retrieval_improvements.json)
-- Trace & Metrics Agent trên Dev: [results/agent_dev/summary.json](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/results/agent_dev/summary.json)
-- Trace & Metrics Agent trên Test: [results/agent_test/summary.json](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/results/agent_test/summary.json)
-- Giao diện Web Dashboard tương tác: [ui/index.html](file:///c:/Users/buida/K5-L3A-DAY07-BuiDangQuang-2A202603640-RetrievalContext/ui/index.html)
+- File câu hỏi Benchmark: [data/benchmark_questions.json](../../data/benchmark_questions.json)
+- File Chunks trích xuất: [data/chunks.json](../../data/chunks.json)
+- Kết quả Retrieval Baseline: [results/retrieval_dev_baseline.json](../../results/retrieval_dev_baseline.json)
+- Kết quả Thử nghiệm Cải thiện: [results/retrieval_improvements.json](../../results/retrieval_improvements.json)
+- Trace & Metrics Agent trên Dev: [results/agent_dev/summary.json](../../results/agent_dev/summary.json)
+- Trace & Metrics Agent trên Test: [results/agent_test/summary.json](../../results/agent_test/summary.json)
+- Giao diện Web Dashboard tương tác: [ui/index.html](../../ui/index.html)
 
 ### 4.2. Lệnh chạy tái lập toàn bộ quy trình
 ```powershell
@@ -132,3 +136,63 @@ python ui/server.py
 ### 4.3. Đánh đổi (Trade-offs) và Giới hạn hệ thống
 - **Đánh đổi giữa Tốc độ và Ngữ nghĩa:** BM25 có tốc độ cực nhanh (2.87 ms) và độ chính xác từ khóa rất cao trên văn bản quy chế, nhưng không hiểu được ngữ nghĩa câu hỏi diễn giải lại (paraphrasing). Dense Retrieval xử lý ngữ nghĩa tốt nhưng tốn tài nguyên tính toán (39 ms). Cấu hình Hybrid RRF kết hợp cả hai đạt điểm cân bằng tốt nhất dù độ trễ tăng nhẹ lên 52 ms.
 - **Hiện tượng khắt khe của Gemini Flash (Strict Abstention):** Gemini 2.5 Flash có xu hướng từ chối rất nghiêm ngặt (Zero-hallucination). Khi câu hỏi hơi khác cấu trúc câu trong văn bản, mô hình sẵn sàng từ chối (dẫn đến 9/20 câu bị từ chối nhầm trên Dev) để đảm bảo không bao giờ cung cấp thông tin sai lệch. Đây là sự đánh đổi chấp nhận được trong các hệ thống tư vấn pháp lý và quy chế học đường.
+
+---
+
+## 5. Thử thách nâng cao (15 điểm bonus)
+
+### 5.1. Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản
+- **Tài liệu:** *Báo cáo Thường niên Vinamilk 2021* (*"Chinh phục thử thách — Bứt phá vươn cao"*), mã chứng khoán `VNM`.
+- **Số trang vật lý:** **121 trang** (đáp ứng điều kiện $\ge 100$ trang của [ADVANCED.md](../../ADVANCED.md)).
+- **Quyền sử dụng:** Tài liệu công bố thông tin đại chúng theo luật Chứng khoán, phục vụ học thuật và nghiên cứu kỹ thuật.
+- **Nguồn truy cập trực tuyến trên Internet:**
+  - Cổng thông tin Quan hệ Cổ đông Vinamilk: [https://www.vinamilk.com.vn/vi/bao-cao-thuong-nien](https://www.vinamilk.com.vn/vi/bao-cao-thuong-nien)
+  - Tải trực tiếp tệp PDF gốc từ CDN chính thức của Vinamilk: [Vinamilk BCTN 2021 PDF (Cloudfront CDN)](https://d8um25gjecm9v.cloudfront.net/cms/1650451537_b3efd46d2f003afce29e7e0aaab1521241f779cb82f0b211a34af53b17adfb09_1261da94e5.pdf)
+  - Tệp lưu trữ trong kho mã nguồn: `data/vinamilk_bctn.pdf`.
+
+### 5.2. Cách xử lý text, bảng, ảnh, biểu đồ và phạm vi index
+- **Pipeline:** [src/advanced/build_index.py](../../src/advanced/build_index.py) trích xuất toàn bộ 121 trang của tài liệu thành **514 chunks** ([data/advanced/chunks.json](../../data/advanced/chunks.json)).
+- **Phân loại content-type tự động:**
+  - `table`: 84 chunks (Báo cáo tài chính kiểm toán KPMG 5 năm, doanh thu, lợi nhuận, bảng cân đối kế toán).
+  - `chart`: 21 chunks (Biểu đồ tăng trưởng doanh thu quý, tỷ trọng doanh thu quốc tế, biến động ROE, ROA, EBITDA).
+  - `diagram`: 5 chunks (Sơ đồ tổ chức, sơ đồ mạng lưới 13 nhà máy, cơ cấu công ty con nước ngoài AngkorMilk, Miraka).
+  - `text`: 404 chunks (Thông điệp Chủ tịch HĐQT, báo cáo ESG 17 mục tiêu LHQ, chiến lược 2022-2026).
+
+### 5.3. Cách chia benchmark, schema evidence, model và cấu hình đã chốt trên dev
+- **Benchmark 48 câu hỏi ([data/advanced/benchmark.json](../../data/advanced/benchmark.json)):**
+  - **18 câu Dev:** 4 Bảng, 3 Biểu đồ, 3 Sơ đồ, 3 Multi-hop, 2 Text, 3 Unanswerable.
+  - **30 câu Test:** Đúng quy định cấu trúc tối thiểu của `ADVANCED.md`.
+- **Cấu hình chốt trên Dev:** Hybrid RRF kết hợp **Entity & Acronym Boosting** (`EBITDA`, `ROE`, `ROA`, `EPS`, `Lê Thị Băng Tâm`, `Vibev`, `Miraka`), mở rộng Top-K=8 và Context Budget 3500 ký tự. Đạt **17/18 câu (94.44%)** trên Dev.
+
+### 5.4. Bảng kết quả đánh giá trên toàn bộ tập Test (30 câu)
+
+$$\text{Tỷ lệ đạt} = \frac{29}{30} \times 100\% = \mathbf{96.67\%}$$
+
+| Nhóm test | Đạt / tổng | Tỷ lệ (%) | Lỗi / nhận xét |
+|---|---:|---:|---|
+| **Bảng** | 6 / 6 | **100.0%** | Khớp chính xác 100% doanh thu, LNTT, LNST, EPS, ROA năm 2021 |
+| **Ảnh, sơ đồ** | 5 / 5 | **100.0%** | Trích xuất chuẩn xác tỷ lệ sở hữu Miraka (22.81%), văn phòng bán hàng, năm sinh/học vị Chủ tịch HĐQT |
+| **Biểu đồ** | 4 / 5 | **80.0%** | Đọc đúng kế hoạch năm (98.2%), DT quốc tế (9.295 tỷ), EBITDA 2020 (15.871 tỷ), ROA 2017 (32%) |
+| **Multi-hop** | 4 / 4 | **100.0%** | Liên kết xuất sắc liên doanh Vibev - KIDO, HĐQT độc lập, xếp hạng 36 thế giới, đàn bò 160.000 con |
+| **Text** | 4 / 4 | **100.0%** | Lịch sử AngkorMilk 2017, hệ thống Green Farm, danh mục 250 sản phẩm |
+| **Thiếu bằng chứng** | 6 / 6 | **100.0%** | Nhận diện câu hỏi bẫy và từ chối (Abstain) dứt khoát 6/6 câu, triệt tiêu ảo giác |
+| **Toàn bộ** | **29 / 30** | **96.67%** | **ĐẠT ĐIỀU KIỆN 15 ĐIỂM BONUS ($\ge 90\%$)** |
+
+### 5.5. Trace, nhãn và evidence từng câu tiêu biểu
+
+| Mã câu | Nhóm | Câu hỏi | Câu trả lời của Agent & Citation | Nhãn, lý do |
+|---|---|---|---|---|
+| `adv_test_01` | Table | Lợi nhuận trước thuế hợp nhất năm 2021 là bao nhiêu tỷ đồng? | *"Lợi nhuận trước thuế hợp nhất năm 2021 là 12.922 tỷ đồng [vnm_p010_c00]."* | **ĐẠT** — Số liệu khớp 100% BCTC trang 10. |
+| `adv_test_07` | Diagram | Vinamilk sở hữu bao nhiêu % vốn tại Miraka Limited (New Zealand)? | *"Vinamilk nắm giữ 22,81% vốn tại Miraka Limited [vnm_p015_c01]."* | **ĐẠT** — Đọc chính xác sơ đồ mạng lưới quốc tế trang 15. |
+| `adv_test_13` | Chart | Doanh thu thuần kinh doanh quốc tế năm 2021 đạt bao nhiêu? | *"Doanh thu thuần kinh doanh quốc tế đạt 9.295 tỷ đồng [vnm_p004_c03]."* | **ĐẠT** — Đọc chính xác số liệu biểu đồ trang 4. |
+| `adv_test_17` | Multi-hop | Sản phẩm và kênh phân phối của liên doanh Vibev (Vinamilk - KIDO)? | *"Gồm 2 sản phẩm sữa đậu xanh và sữa bắp Oh Fresh; phân phối qua siêu thị, minimart, tạp hóa, quán ăn và TMĐT [vnm_p050_c00]."* | **ĐẠT** — Tổng hợp đầy đủ từ ngữ cảnh trang 50. |
+| `adv_test_25` | Unanswerable | Chi phí mua bản quyền thương hiệu sữa chua Chobani tại Mỹ? | *"Tài liệu Báo cáo thường niên Vinamilk 2021 không cung cấp thông tin về chi phí mua bản quyền thương hiệu Chobani."* | **ĐẠT** — Từ chối chuẩn mực, không suy đoán. |
+
+### 5.6. Giới hạn, cách tái lập và đường dẫn benchmark
+- **Đường dẫn Benchmark:** [data/advanced/benchmark.json](../../data/advanced/benchmark.json)
+- **Kết quả kiểm thử Test chi tiết:** [results/advanced/test_results.json](../../results/advanced/test_results.json)
+- **Lệnh chạy tái lập kiểm chứng:**
+  ```powershell
+  python -m src.advanced.evaluate test
+  ```
+- **Thời gian & Chi phí:** Thời gian trung bình 1.2s/câu, tổng chi phí API dưới \$0.02.
