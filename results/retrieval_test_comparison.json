@@ -1,0 +1,825 @@
+{
+  "split": "test",
+  "budget": 800,
+  "top_k": 3,
+  "summary": [
+    {
+      "strategy": "BM25 (Lexical)",
+      "n_answerable": 8,
+      "hit1": "1/8 (12.5%)",
+      "evidence_hit3": "2/8 (25.0%)",
+      "context_evidence_rate": "1/8 (12.5%)",
+      "hit1_val": 0.125,
+      "hit3_val": 0.25,
+      "ctx_val": 0.125,
+      "median_ms": 2.94
+    },
+    {
+      "strategy": "Dense (pgvector / text-embedding-3-small)",
+      "n_answerable": 8,
+      "hit1": "1/8 (12.5%)",
+      "evidence_hit3": "2/8 (25.0%)",
+      "context_evidence_rate": "1/8 (12.5%)",
+      "hit1_val": 0.125,
+      "hit3_val": 0.25,
+      "ctx_val": 0.125,
+      "median_ms": 35.54
+    },
+    {
+      "strategy": "Hybrid (Dense + BM25 RRF)",
+      "n_answerable": 8,
+      "hit1": "2/8 (25.0%)",
+      "evidence_hit3": "2/8 (25.0%)",
+      "context_evidence_rate": "2/8 (25.0%)",
+      "hit1_val": 0.25,
+      "hit3_val": 0.25,
+      "ctx_val": 0.25,
+      "median_ms": 39.98
+    }
+  ],
+  "details": [
+    {
+      "strategy": "BM25 (Lexical)",
+      "n_answerable": 8,
+      "hit1": "1/8 (12.5%)",
+      "evidence_hit3": "2/8 (25.0%)",
+      "context_evidence_rate": "1/8 (12.5%)",
+      "hit1_val": 0.125,
+      "hit3_val": 0.25,
+      "ctx_val": 0.125,
+      "median_ms": 2.94,
+      "traces": [
+        {
+          "query_id": "q16",
+          "question": "Số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính là bao nhiêu?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 3.18,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p02",
+              "page": 15,
+              "score": 23.74,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p02",
+              "page": 16,
+              "score": 22.2581,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p00",
+              "page": 16,
+              "score": 22.2001,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q17",
+          "question": "Trong phần đánh giá rèn luyện, nếu sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 0.37,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p108_p01",
+              "page": 108,
+              "score": 20.4601,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p115_p02",
+              "page": 115,
+              "score": 14.7818,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p115_p00",
+              "page": 115,
+              "score": 13.5307,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q18",
+          "question": "Điều kiện về chứng chỉ tiếng Anh chuẩn đầu ra đối với sinh viên đại học hệ chính quy khi xét tốt nghiệp là gì?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 3.07,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p040_p02",
+              "page": 40,
+              "score": 28.199,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p040_p01",
+              "page": 40,
+              "score": 27.3913,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p02",
+              "page": 28,
+              "score": 24.8618,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q19",
+          "question": "Sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.99,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p094_p01",
+              "page": 94,
+              "score": 24.2416,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p02",
+              "page": 28,
+              "score": 22.1573,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p089_p00",
+              "page": 89,
+              "score": 21.9002,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q20",
+          "question": "Sinh viên học cùng lúc hai chương trình (học song bằng) được phép đăng ký chương trình thứ hai sớm nhất khi nào?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.9,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p01",
+              "page": 33,
+              "score": 40.692,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p02",
+              "page": 33,
+              "score": 40.4554,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p00",
+              "page": 33,
+              "score": 36.6975,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q31",
+          "question": "Trong trường hợp nào giấy xác nhận ốm xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 2.69,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 30.8998,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p03",
+              "page": 30,
+              "score": 29.4219,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p01",
+              "page": 31,
+              "score": 28.7181,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q32",
+          "question": "Quyết định kỷ luật đối với sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên phải gửi về cho ai và nơi nào?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 3.07,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p093_p02",
+              "page": 93,
+              "score": 40.0044,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p094_p01",
+              "page": 94,
+              "score": 28.4753,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 25.276,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q33",
+          "question": "Trong trường hợp đặc biệt, ai là người có thẩm quyền quyết định việc tổ chức thêm kỳ học hè?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 2.73,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p115_p00",
+              "page": 115,
+              "score": 21.5897,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p013_p03",
+              "page": 13,
+              "score": 21.4372,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p113_p02",
+              "page": 113,
+              "score": 18.5984,
+              "hit": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "strategy": "Dense (pgvector / text-embedding-3-small)",
+      "n_answerable": 8,
+      "hit1": "1/8 (12.5%)",
+      "evidence_hit3": "2/8 (25.0%)",
+      "context_evidence_rate": "1/8 (12.5%)",
+      "hit1_val": 0.125,
+      "hit3_val": 0.25,
+      "ctx_val": 0.125,
+      "median_ms": 35.54,
+      "traces": [
+        {
+          "query_id": "q16",
+          "question": "Số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính là bao nhiêu?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 37.43,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p02",
+              "page": 16,
+              "score": 0.6706,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p00",
+              "page": 16,
+              "score": 0.638,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p01",
+              "page": 16,
+              "score": 0.5908,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q17",
+          "question": "Trong phần đánh giá rèn luyện, nếu sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 3.15,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p114_p02",
+              "page": 114,
+              "score": 0.523,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p115_p00",
+              "page": 115,
+              "score": 0.5027,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p108_p01",
+              "page": 108,
+              "score": 0.4999,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q18",
+          "question": "Điều kiện về chứng chỉ tiếng Anh chuẩn đầu ra đối với sinh viên đại học hệ chính quy khi xét tốt nghiệp là gì?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 35.49,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p02",
+              "page": 28,
+              "score": 0.6561,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p040_p01",
+              "page": 40,
+              "score": 0.6371,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p040_p02",
+              "page": 40,
+              "score": 0.6141,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q19",
+          "question": "Sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 35.33,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 0.6765,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p094_p01",
+              "page": 94,
+              "score": 0.6486,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p025_p00",
+              "page": 25,
+              "score": 0.6472,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q20",
+          "question": "Sinh viên học cùng lúc hai chương trình (học song bằng) được phép đăng ký chương trình thứ hai sớm nhất khi nào?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 35.39,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p00",
+              "page": 33,
+              "score": 0.7465,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p01",
+              "page": 33,
+              "score": 0.6966,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p02",
+              "page": 33,
+              "score": 0.6866,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q31",
+          "question": "Trong trường hợp nào giấy xác nhận ốm xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 36.97,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p01",
+              "page": 31,
+              "score": 0.5884,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 0.5647,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p01",
+              "page": 30,
+              "score": 0.5429,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q32",
+          "question": "Quyết định kỷ luật đối với sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên phải gửi về cho ai và nơi nào?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 35.91,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p093_p02",
+              "page": 93,
+              "score": 0.6224,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 0.6209,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p115_p01",
+              "page": 115,
+              "score": 0.5813,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q33",
+          "question": "Trong trường hợp đặc biệt, ai là người có thẩm quyền quyết định việc tổ chức thêm kỳ học hè?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 35.6,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p013_p03",
+              "page": 13,
+              "score": 0.5799,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p095_p02",
+              "page": 95,
+              "score": 0.533,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p017_p01",
+              "page": 17,
+              "score": 0.5242,
+              "hit": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "strategy": "Hybrid (Dense + BM25 RRF)",
+      "n_answerable": 8,
+      "hit1": "2/8 (25.0%)",
+      "evidence_hit3": "2/8 (25.0%)",
+      "context_evidence_rate": "2/8 (25.0%)",
+      "hit1_val": 0.25,
+      "hit3_val": 0.25,
+      "ctx_val": 0.25,
+      "median_ms": 39.98,
+      "traces": [
+        {
+          "query_id": "q16",
+          "question": "Số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính là bao nhiêu?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 42.31,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p02",
+              "page": 16,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p00",
+              "page": 16,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p02",
+              "page": 15,
+              "score": 0.0318,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q17",
+          "question": "Trong phần đánh giá rèn luyện, nếu sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 3.61,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p108_p01",
+              "page": 108,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p115_p00",
+              "page": 115,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p109_p00",
+              "page": 109,
+              "score": 0.0305,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q18",
+          "question": "Điều kiện về chứng chỉ tiếng Anh chuẩn đầu ra đối với sinh viên đại học hệ chính quy khi xét tốt nghiệp là gì?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 40.45,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p02",
+              "page": 28,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p040_p02",
+              "page": 40,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p040_p01",
+              "page": 40,
+              "score": 0.0323,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q19",
+          "question": "Sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 40.38,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p094_p01",
+              "page": 94,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p02",
+              "page": 92,
+              "score": 0.031,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p093_p02",
+              "page": 93,
+              "score": 0.0308,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q20",
+          "question": "Sinh viên học cùng lúc hai chương trình (học song bằng) được phép đăng ký chương trình thứ hai sớm nhất khi nào?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 38.87,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p01",
+              "page": 33,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p00",
+              "page": 33,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p02",
+              "page": 33,
+              "score": 0.032,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q31",
+          "question": "Trong trường hợp nào giấy xác nhận ốm xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 39.97,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 0.0325,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p01",
+              "page": 31,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p03",
+              "page": 30,
+              "score": 0.0311,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q32",
+          "question": "Quyết định kỷ luật đối với sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên phải gửi về cho ai và nơi nào?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 39.99,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p093_p02",
+              "page": 93,
+              "score": 0.0328,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p094_p01",
+              "page": 94,
+              "score": 0.0318,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q33",
+          "question": "Trong trường hợp đặc biệt, ai là người có thẩm quyền quyết định việc tổ chức thêm kỳ học hè?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 38.67,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p013_p03",
+              "page": 13,
+              "score": 0.0325,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p089_p00",
+              "page": 89,
+              "score": 0.0312,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p02",
+              "page": 15,
+              "score": 0.0303,
+              "hit": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

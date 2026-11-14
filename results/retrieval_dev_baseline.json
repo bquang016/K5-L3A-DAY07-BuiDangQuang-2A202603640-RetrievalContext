@@ -1,0 +1,1941 @@
+{
+  "split": "dev",
+  "budget": 800,
+  "top_k": 3,
+  "summary": [
+    {
+      "strategy": "BM25 (Lexical)",
+      "n_answerable": 20,
+      "hit1": "12/20 (60.0%)",
+      "evidence_hit3": "14/20 (70.0%)",
+      "context_evidence_rate": "12/20 (60.0%)",
+      "hit1_val": 0.6,
+      "hit3_val": 0.7,
+      "ctx_val": 0.6,
+      "median_ms": 2.87
+    },
+    {
+      "strategy": "Dense (pgvector / text-embedding-3-small)",
+      "n_answerable": 20,
+      "hit1": "6/20 (30.0%)",
+      "evidence_hit3": "9/20 (45.0%)",
+      "context_evidence_rate": "6/20 (30.0%)",
+      "hit1_val": 0.3,
+      "hit3_val": 0.45,
+      "ctx_val": 0.3,
+      "median_ms": 39.39
+    },
+    {
+      "strategy": "Hybrid (Dense + BM25 RRF)",
+      "n_answerable": 20,
+      "hit1": "7/20 (35.0%)",
+      "evidence_hit3": "12/20 (60.0%)",
+      "context_evidence_rate": "7/20 (35.0%)",
+      "hit1_val": 0.35,
+      "hit3_val": 0.6,
+      "ctx_val": 0.35,
+      "median_ms": 51.83
+    }
+  ],
+  "details": [
+    {
+      "strategy": "BM25 (Lexical)",
+      "n_answerable": 20,
+      "hit1": "12/20 (60.0%)",
+      "evidence_hit3": "14/20 (70.0%)",
+      "context_evidence_rate": "12/20 (60.0%)",
+      "hit1_val": 0.6,
+      "hit3_val": 0.7,
+      "ctx_val": 0.6,
+      "median_ms": 2.87,
+      "traces": [
+        {
+          "query_id": "q01",
+          "question": "Một tín chỉ học tập được quy định tương đương với bao nhiêu giờ học lý thuyết trên lớp?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 3.16,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p009_p03",
+              "page": 9,
+              "score": 21.0354,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p02",
+              "page": 15,
+              "score": 15.5135,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p038_p01",
+              "page": 38,
+              "score": 15.1805,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q02",
+          "question": "Điểm đánh giá bộ phận và điểm thi kết thúc học phần được chấm theo thang điểm nào?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.88,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 37.8489,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p021_p00",
+              "page": 21,
+              "score": 24.8313,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p02",
+              "page": 22,
+              "score": 22.7087,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q03",
+          "question": "Sinh viên bị cảnh báo học tập ở mức mấy thì sẽ bị buộc thôi học?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.66,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p03",
+              "page": 104,
+              "score": 23.1235,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p00",
+              "page": 23,
+              "score": 20.191,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p100_p02",
+              "page": 100,
+              "score": 19.1508,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q04",
+          "question": "Trong quy định đào tạo tín chỉ, sinh viên phát hiện điểm thi trên website sai khác với phiếu ghi điểm thì cần làm gì?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 1.89,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p00",
+              "page": 22,
+              "score": 40.2212,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p013_p02",
+              "page": 13,
+              "score": 21.6057,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p01",
+              "page": 28,
+              "score": 19.7118,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q05",
+          "question": "Điểm học phần đạt mức nào (theo thang điểm chữ) thì sinh viên được tính là tích lũy học phần đó?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.86,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p02",
+              "page": 23,
+              "score": 29.4618,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 27.9709,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p02",
+              "page": 22,
+              "score": 24.093,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q06",
+          "question": "Thời gian tối đa để sinh viên hoàn thành chương trình đào tạo chuẩn 4 năm là bao lâu?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.67,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p02",
+              "page": 8,
+              "score": 30.3111,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p03",
+              "page": 8,
+              "score": 25.846,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p01",
+              "page": 8,
+              "score": 23.5538,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q07",
+          "question": "Sinh viên muốn xin nghỉ học tạm thời và bảo lưu kết quả học tập thì phải nộp đơn cho đơn vị nào?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 3.08,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p02",
+              "page": 31,
+              "score": 33.1042,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p01",
+              "page": 31,
+              "score": 28.0434,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p025_p03",
+              "page": 25,
+              "score": 26.4489,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "query_id": "q08",
+          "question": "Trường hợp nào sinh viên vắng mặt trong buổi thi kết thúc học phần được xếp lịch thi bổ sung ở đợt thi sau?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 2.85,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p021_p02",
+              "page": 21,
+              "score": 32.4449,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p00",
+              "page": 23,
+              "score": 28.1032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p02",
+              "page": 18,
+              "score": 26.2054,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q09",
+          "question": "Trong công tác sinh viên, mỗi lớp học phần có bao nhiêu lớp trưởng và do ai chỉ định?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 0.78,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p088_p00",
+              "page": 88,
+              "score": 21.1665,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p087_p00",
+              "page": 87,
+              "score": 19.0869,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p086_p02",
+              "page": 86,
+              "score": 18.6823,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q10",
+          "question": "Để đạt danh hiệu Sinh viên Xuất sắc trong năm học, sinh viên cần có điểm trung bình chung học tập và điểm rèn luyện tối thiểu là bao nhiêu?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 3.08,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p090_p02",
+              "page": 90,
+              "score": 32.2886,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p091_p00",
+              "page": 91,
+              "score": 30.5463,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p01",
+              "page": 104,
+              "score": 29.1047,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q11",
+          "question": "Khung điểm đánh giá kết quả rèn luyện của sinh viên được tính theo thang điểm tối đa là bao nhiêu?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 2.73,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p01",
+              "page": 104,
+              "score": 22.8065,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p108_p01",
+              "page": 108,
+              "score": 22.5017,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p01",
+              "page": 18,
+              "score": 21.9552,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q12",
+          "question": "Sinh viên có điểm rèn luyện trong học kỳ đạt từ 80 đến dưới 90 điểm thì được xếp loại rèn luyện gì?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 2.89,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p02",
+              "page": 104,
+              "score": 43.0551,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p090_p02",
+              "page": 90,
+              "score": 34.7246,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p03",
+              "page": 104,
+              "score": 29.7013,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q13",
+          "question": "Sinh viên bị kỷ luật ở mức Cảnh cáo toàn Học viện trong học kỳ thì điểm rèn luyện của học kỳ đó tối đa không vượt quá loại nào?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 3.15,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p029_p02",
+              "page": 29,
+              "score": 29.0534,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p00",
+              "page": 23,
+              "score": 27.3374,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p033_p02",
+              "page": 33,
+              "score": 26.445,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q14",
+          "question": "Trạm Y tế của Học viện Nông nghiệp Việt Nam nằm ở vị trí nào trong khuôn viên trường?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.77,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p041_p01",
+              "page": 41,
+              "score": 21.9527,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p102_p01",
+              "page": 102,
+              "score": 20.7334,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p083_p02",
+              "page": 83,
+              "score": 19.5007,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q15",
+          "question": "Sinh viên cần liên hệ bộ phận nào để giải quyết các vấn đề liên quan đến đăng ký nội trú tại Ký túc xá?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2.74,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p084_p02",
+              "page": 84,
+              "score": 40.0664,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p087_p01",
+              "page": 87,
+              "score": 24.7956,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p046_p02",
+              "page": 46,
+              "score": 23.314,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q21",
+          "question": "Mỗi năm học tại Học viện Nông nghiệp Việt Nam được chia thành mấy kỳ học chính và mỗi kỳ học chính có bao nhiêu tuần học?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 2.97,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p013_p02",
+              "page": 13,
+              "score": 31.7377,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p102_p01",
+              "page": 102,
+              "score": 26.7466,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p007_p00",
+              "page": 7,
+              "score": 23.6355,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q22",
+          "question": "Mọi thủ tục đăng ký nhập học của sinh viên phải được hoàn thành trong thời hạn bao nhiêu ngày kể từ ngày nhập học ghi trong giấy triệu tập trúng tuyển?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 3.11,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p014_p02",
+              "page": 14,
+              "score": 64.5115,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p014_p01",
+              "page": 14,
+              "score": 39.0226,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p03",
+              "page": 30,
+              "score": 24.6577,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q23",
+          "question": "Sinh viên không đủ tiêu chuẩn làm khóa luận tốt nghiệp do khoa quy định phải đăng ký học thêm bao nhiêu tín chỉ tự chọn trong phần chuyên môn?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 3.01,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p027_p00",
+              "page": 27,
+              "score": 49.0123,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p038_p02",
+              "page": 38,
+              "score": 44.2006,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p026_p00",
+              "page": 26,
+              "score": 38.7343,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q24",
+          "question": "Thời gian xét đủ điều kiện tốt nghiệp cho sinh viên các khóa được tổ chức vào ngày nào trong các tháng xét tốt nghiệp?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 2.92,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p00",
+              "page": 28,
+              "score": 36.9049,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p029_p01",
+              "page": 29,
+              "score": 32.6746,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p01",
+              "page": 28,
+              "score": 29.2662,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q25",
+          "question": "Sinh viên muốn được xét tốt nghiệp sớm hơn so với thời gian thiết kế của khóa học thì phải nộp đơn về đơn vị nào?",
+          "strategy": "BM25 (Lexical)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 2.82,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p029_p01",
+              "page": 29,
+              "score": 32.0916,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p02",
+              "page": 28,
+              "score": 31.5125,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p03",
+              "page": 31,
+              "score": 21.7682,
+              "hit": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "strategy": "Dense (pgvector / text-embedding-3-small)",
+      "n_answerable": 20,
+      "hit1": "6/20 (30.0%)",
+      "evidence_hit3": "9/20 (45.0%)",
+      "context_evidence_rate": "6/20 (30.0%)",
+      "hit1_val": 0.3,
+      "hit3_val": 0.45,
+      "ctx_val": 0.3,
+      "median_ms": 39.39,
+      "traces": [
+        {
+          "query_id": "q01",
+          "question": "Một tín chỉ học tập được quy định tương đương với bao nhiêu giờ học lý thuyết trên lớp?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 36.59,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p009_p03",
+              "page": 9,
+              "score": 0.6662,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p024_p01",
+              "page": 24,
+              "score": 0.5859,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p00",
+              "page": 8,
+              "score": 0.5674,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q02",
+          "question": "Điểm đánh giá bộ phận và điểm thi kết thúc học phần được chấm theo thang điểm nào?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 35.94,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 0.8078,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p02",
+              "page": 22,
+              "score": 0.6606,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p01",
+              "page": 18,
+              "score": 0.6565,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "query_id": "q03",
+          "question": "Sinh viên bị cảnh báo học tập ở mức mấy thì sẽ bị buộc thôi học?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 37.04,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p025_p00",
+              "page": 25,
+              "score": 0.7184,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p024_p02",
+              "page": 24,
+              "score": 0.6228,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 0.605,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q04",
+          "question": "Trong quy định đào tạo tín chỉ, sinh viên phát hiện điểm thi trên website sai khác với phiếu ghi điểm thì cần làm gì?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 21.86,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p00",
+              "page": 22,
+              "score": 0.7328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p021_p01",
+              "page": 21,
+              "score": 0.5657,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p011_p03",
+              "page": 11,
+              "score": 0.5535,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q05",
+          "question": "Điểm học phần đạt mức nào (theo thang điểm chữ) thì sinh viên được tính là tích lũy học phần đó?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 39.34,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 0.708,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p02",
+              "page": 23,
+              "score": 0.7023,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p01",
+              "page": 23,
+              "score": 0.6961,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q06",
+          "question": "Thời gian tối đa để sinh viên hoàn thành chương trình đào tạo chuẩn 4 năm là bao lâu?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 38.92,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p02",
+              "page": 8,
+              "score": 0.694,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p01",
+              "page": 8,
+              "score": 0.6782,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p026_p01",
+              "page": 26,
+              "score": 0.6191,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q07",
+          "question": "Sinh viên muốn xin nghỉ học tạm thời và bảo lưu kết quả học tập thì phải nộp đơn cho đơn vị nào?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 38.74,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p01",
+              "page": 31,
+              "score": 0.6088,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 0.5923,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p02",
+              "page": 31,
+              "score": 0.59,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q08",
+          "question": "Trường hợp nào sinh viên vắng mặt trong buổi thi kết thúc học phần được xếp lịch thi bổ sung ở đợt thi sau?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 52.06,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p020_p03",
+              "page": 20,
+              "score": 0.6101,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p020_p00",
+              "page": 20,
+              "score": 0.5923,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p02",
+              "page": 18,
+              "score": 0.5793,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q09",
+          "question": "Trong công tác sinh viên, mỗi lớp học phần có bao nhiêu lớp trưởng và do ai chỉ định?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 11.51,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p088_p00",
+              "page": 88,
+              "score": 0.6415,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p086_p02",
+              "page": 86,
+              "score": 0.5805,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p086_p03",
+              "page": 86,
+              "score": 0.5698,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q10",
+          "question": "Để đạt danh hiệu Sinh viên Xuất sắc trong năm học, sinh viên cần có điểm trung bình chung học tập và điểm rèn luyện tối thiểu là bao nhiêu?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 40.64,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p01",
+              "page": 23,
+              "score": 0.6277,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p091_p02",
+              "page": 91,
+              "score": 0.6141,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p024_p00",
+              "page": 24,
+              "score": 0.6015,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q11",
+          "question": "Khung điểm đánh giá kết quả rèn luyện của sinh viên được tính theo thang điểm tối đa là bao nhiêu?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 44.89,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p01",
+              "page": 23,
+              "score": 0.6476,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p02",
+              "page": 104,
+              "score": 0.6209,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p01",
+              "page": 18,
+              "score": 0.6154,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q12",
+          "question": "Sinh viên có điểm rèn luyện trong học kỳ đạt từ 80 đến dưới 90 điểm thì được xếp loại rèn luyện gì?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 41.33,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p02",
+              "page": 104,
+              "score": 0.6662,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p03",
+              "page": 104,
+              "score": 0.6051,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p024_p01",
+              "page": 24,
+              "score": 0.5674,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q13",
+          "question": "Sinh viên bị kỷ luật ở mức Cảnh cáo toàn Học viện trong học kỳ thì điểm rèn luyện của học kỳ đó tối đa không vượt quá loại nào?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 37.59,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 0.608,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p02",
+              "page": 92,
+              "score": 0.6079,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p094_p01",
+              "page": 94,
+              "score": 0.5891,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q14",
+          "question": "Trạm Y tế của Học viện Nông nghiệp Việt Nam nằm ở vị trí nào trong khuôn viên trường?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 39.44,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p101_p01",
+              "page": 101,
+              "score": 0.5233,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p101_p02",
+              "page": 101,
+              "score": 0.4789,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p101_p00",
+              "page": 101,
+              "score": 0.4473,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q15",
+          "question": "Sinh viên cần liên hệ bộ phận nào để giải quyết các vấn đề liên quan đến đăng ký nội trú tại Ký túc xá?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 36.41,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p085_p02",
+              "page": 85,
+              "score": 0.6462,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p101_p01",
+              "page": 101,
+              "score": 0.5842,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p02",
+              "page": 16,
+              "score": 0.5716,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q21",
+          "question": "Mỗi năm học tại Học viện Nông nghiệp Việt Nam được chia thành mấy kỳ học chính và mỗi kỳ học chính có bao nhiêu tuần học?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 3798.66,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p00",
+              "page": 16,
+              "score": 0.5292,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p02",
+              "page": 8,
+              "score": 0.521,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p01",
+              "page": 15,
+              "score": 0.5206,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q22",
+          "question": "Mọi thủ tục đăng ký nhập học của sinh viên phải được hoàn thành trong thời hạn bao nhiêu ngày kể từ ngày nhập học ghi trong giấy triệu tập trúng tuyển?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 1975.03,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p014_p02",
+              "page": 14,
+              "score": 0.7251,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p014_p01",
+              "page": 14,
+              "score": 0.6158,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p02",
+              "page": 16,
+              "score": 0.5735,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q23",
+          "question": "Sinh viên không đủ tiêu chuẩn làm khóa luận tốt nghiệp do khoa quy định phải đăng ký học thêm bao nhiêu tín chỉ tự chọn trong phần chuyên môn?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 1786.88,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p038_p02",
+              "page": 38,
+              "score": 0.7027,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p026_p00",
+              "page": 26,
+              "score": 0.6778,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p027_p00",
+              "page": 27,
+              "score": 0.6642,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "query_id": "q24",
+          "question": "Thời gian xét đủ điều kiện tốt nghiệp cho sinh viên các khóa được tổ chức vào ngày nào trong các tháng xét tốt nghiệp?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 1824.49,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p00",
+              "page": 28,
+              "score": 0.6525,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p029_p01",
+              "page": 29,
+              "score": 0.6233,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p026_p01",
+              "page": 26,
+              "score": 0.6048,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q25",
+          "question": "Sinh viên muốn được xét tốt nghiệp sớm hơn so với thời gian thiết kế của khóa học thì phải nộp đơn về đơn vị nào?",
+          "strategy": "Dense (pgvector / text-embedding-3-small)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 2246.25,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p02",
+              "page": 15,
+              "score": 0.5736,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 0.5596,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p038_p02",
+              "page": 38,
+              "score": 0.5593,
+              "hit": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "strategy": "Hybrid (Dense + BM25 RRF)",
+      "n_answerable": 20,
+      "hit1": "7/20 (35.0%)",
+      "evidence_hit3": "12/20 (60.0%)",
+      "context_evidence_rate": "7/20 (35.0%)",
+      "hit1_val": 0.35,
+      "hit3_val": 0.6,
+      "ctx_val": 0.35,
+      "median_ms": 51.83,
+      "traces": [
+        {
+          "query_id": "q01",
+          "question": "Một tín chỉ học tập được quy định tương đương với bao nhiêu giờ học lý thuyết trên lớp?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 69.42,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p009_p03",
+              "page": 9,
+              "score": 0.0328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p015_p02",
+              "page": 15,
+              "score": 0.0311,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p010_p00",
+              "page": 10,
+              "score": 0.0308,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q02",
+          "question": "Điểm đánh giá bộ phận và điểm thi kết thúc học phần được chấm theo thang điểm nào?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 72.01,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 0.0328,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p02",
+              "page": 22,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p01",
+              "page": 18,
+              "score": 0.0315,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "query_id": "q03",
+          "question": "Sinh viên bị cảnh báo học tập ở mức mấy thì sẽ bị buộc thôi học?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 75.66,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p025_p00",
+              "page": 25,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p03",
+              "page": 104,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p03",
+              "page": 92,
+              "score": 0.0313,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q04",
+          "question": "Trong quy định đào tạo tín chỉ, sinh viên phát hiện điểm thi trên website sai khác với phiếu ghi điểm thì cần làm gì?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 50.91,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p00",
+              "page": 22,
+              "score": 0.0328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p01",
+              "page": 28,
+              "score": 0.0313,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p046_p02",
+              "page": 46,
+              "score": 0.0296,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q05",
+          "question": "Điểm học phần đạt mức nào (theo thang điểm chữ) thì sinh viên được tính là tích lũy học phần đó?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 70.82,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p02",
+              "page": 23,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p01",
+              "page": 23,
+              "score": 0.0315,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q06",
+          "question": "Thời gian tối đa để sinh viên hoàn thành chương trình đào tạo chuẩn 4 năm là bao lâu?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 69.38,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p02",
+              "page": 8,
+              "score": 0.0328,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p01",
+              "page": 8,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p03",
+              "page": 8,
+              "score": 0.0311,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q07",
+          "question": "Sinh viên muốn xin nghỉ học tạm thời và bảo lưu kết quả học tập thì phải nộp đơn cho đơn vị nào?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 64.27,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p01",
+              "page": 31,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p02",
+              "page": 31,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 0.0315,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q08",
+          "question": "Trường hợp nào sinh viên vắng mặt trong buổi thi kết thúc học phần được xếp lịch thi bổ sung ở đợt thi sau?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 48.47,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p02",
+              "page": 18,
+              "score": 0.0317,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p021_p02",
+              "page": 21,
+              "score": 0.0311,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p021_p00",
+              "page": 21,
+              "score": 0.031,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q09",
+          "question": "Trong công tác sinh viên, mỗi lớp học phần có bao nhiêu lớp trưởng và do ai chỉ định?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 11.62,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p088_p00",
+              "page": 88,
+              "score": 0.0328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p086_p02",
+              "page": 86,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p086_p03",
+              "page": 86,
+              "score": 0.0313,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q10",
+          "question": "Để đạt danh hiệu Sinh viên Xuất sắc trong năm học, sinh viên cần có điểm trung bình chung học tập và điểm rèn luyện tối thiểu là bao nhiêu?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 47.98,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p091_p02",
+              "page": 91,
+              "score": 0.0315,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p091_p01",
+              "page": 91,
+              "score": 0.0312,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p090_p02",
+              "page": 90,
+              "score": 0.0311,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "query_id": "q11",
+          "question": "Khung điểm đánh giá kết quả rèn luyện của sinh viên được tính theo thang điểm tối đa là bao nhiêu?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 40.27,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p018_p01",
+              "page": 18,
+              "score": 0.0317,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p022_p01",
+              "page": 22,
+              "score": 0.0312,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p02",
+              "page": 104,
+              "score": 0.0311,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q12",
+          "question": "Sinh viên có điểm rèn luyện trong học kỳ đạt từ 80 đến dưới 90 điểm thì được xếp loại rèn luyện gì?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 39.52,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p02",
+              "page": 104,
+              "score": 0.0328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p03",
+              "page": 104,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p01",
+              "page": 104,
+              "score": 0.0301,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q13",
+          "question": "Sinh viên bị kỷ luật ở mức Cảnh cáo toàn Học viện trong học kỳ thì điểm rèn luyện của học kỳ đó tối đa không vượt quá loại nào?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 40.93,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p092_p02",
+              "page": 92,
+              "score": 0.0315,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p104_p02",
+              "page": 104,
+              "score": 0.031,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p023_p00",
+              "page": 23,
+              "score": 0.0302,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q14",
+          "question": "Trạm Y tế của Học viện Nông nghiệp Việt Nam nằm ở vị trí nào trong khuôn viên trường?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 53.7,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p102_p01",
+              "page": 102,
+              "score": 0.0313,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p083_p00",
+              "page": 83,
+              "score": 0.0299,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p031_p00",
+              "page": 31,
+              "score": 0.0299,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q15",
+          "question": "Sinh viên cần liên hệ bộ phận nào để giải quyết các vấn đề liên quan đến đăng ký nội trú tại Ký túc xá?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "elapsed_ms": 74.74,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p101_p01",
+              "page": 101,
+              "score": 0.0318,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p085_p02",
+              "page": 85,
+              "score": 0.0313,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p087_p01",
+              "page": 87,
+              "score": 0.0304,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q21",
+          "question": "Mỗi năm học tại Học viện Nông nghiệp Việt Nam được chia thành mấy kỳ học chính và mỗi kỳ học chính có bao nhiêu tuần học?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 61.68,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p013_p02",
+              "page": 13,
+              "score": 0.0318,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p008_p02",
+              "page": 8,
+              "score": 0.0308,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p036_p02",
+              "page": 36,
+              "score": 0.0278,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q22",
+          "question": "Mọi thủ tục đăng ký nhập học của sinh viên phải được hoàn thành trong thời hạn bao nhiêu ngày kể từ ngày nhập học ghi trong giấy triệu tập trúng tuyển?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 52.74,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p014_p02",
+              "page": 14,
+              "score": 0.0328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p014_p01",
+              "page": 14,
+              "score": 0.0323,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p016_p03",
+              "page": 16,
+              "score": 0.0306,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q23",
+          "question": "Sinh viên không đủ tiêu chuẩn làm khóa luận tốt nghiệp do khoa quy định phải đăng ký học thêm bao nhiêu tín chỉ tự chọn trong phần chuyên môn?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 44.9,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p038_p02",
+              "page": 38,
+              "score": 0.0325,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p027_p00",
+              "page": 27,
+              "score": 0.0323,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p026_p00",
+              "page": 26,
+              "score": 0.032,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q24",
+          "question": "Thời gian xét đủ điều kiện tốt nghiệp cho sinh viên các khóa được tổ chức vào ngày nào trong các tháng xét tốt nghiệp?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "elapsed_ms": 45.57,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p00",
+              "page": 28,
+              "score": 0.0328,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p029_p01",
+              "page": 29,
+              "score": 0.0323,
+              "hit": true
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p026_p00",
+              "page": 26,
+              "score": 0.0306,
+              "hit": false
+            }
+          ]
+        },
+        {
+          "query_id": "q25",
+          "question": "Sinh viên muốn được xét tốt nghiệp sớm hơn so với thời gian thiết kế của khóa học thì phải nộp đơn về đơn vị nào?",
+          "strategy": "Hybrid (Dense + BM25 RRF)",
+          "top_k": 3,
+          "budget": 800,
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "elapsed_ms": 45.97,
+          "results": [
+            {
+              "id": "so_tay_sinh_vien_k67_p029_p01",
+              "page": 29,
+              "score": 0.032,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p030_p02",
+              "page": 30,
+              "score": 0.0315,
+              "hit": false
+            },
+            {
+              "id": "so_tay_sinh_vien_k67_p028_p02",
+              "page": 28,
+              "score": 0.0291,
+              "hit": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

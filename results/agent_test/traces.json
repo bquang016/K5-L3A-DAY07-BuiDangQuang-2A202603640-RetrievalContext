@@ -1,0 +1,770 @@
+[
+  {
+    "query_id": "q16",
+    "split": "test",
+    "question": "Số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính là bao nhiêu?",
+    "status": "abstain",
+    "answer": "Tài liệu Sổ tay sinh viên K67 không cung cấp thông tin về số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính.",
+    "citations": [],
+    "valid_citations": [],
+    "grade": 0,
+    "grade_reason": "Từ chối nhầm câu có đáp án",
+    "elapsed_ms": 2079.43,
+    "context_chars": 822,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính là bao nhiêu?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Số tín chỉ tối thiểu mà sinh viên có học lực bình thường phải đăng ký trong một học kỳ chính là bao nhiêu?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p016_p02",
+            "page": 16,
+            "score": 0.0325
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p016_p00",
+            "page": 16,
+            "score": 0.032
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p015_p02",
+            "page": 15,
+            "score": 0.0318
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p016_p01",
+            "page": 16,
+            "score": 0.0315
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p024_p00",
+            "page": 24,
+            "score": 0.0294
+          }
+        ],
+        "elapsed_ms": 39.88
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p016_p02"
+        ],
+        "char_count": 822,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "abstain",
+        "citations_returned": [],
+        "valid_citations": []
+      }
+    ]
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "question": "Trong phần đánh giá rèn luyện, nếu sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện?",
+    "status": "abstain",
+    "answer": "Tài liệu Sổ tay sinh viên K67 không cung cấp thông tin về việc sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện.",
+    "citations": [],
+    "valid_citations": [],
+    "grade": 0,
+    "grade_reason": "Từ chối nhầm câu có đáp án",
+    "elapsed_ms": 1606.56,
+    "context_chars": 830,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Trong phần đánh giá rèn luyện, nếu sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Trong phần đánh giá rèn luyện, nếu sinh viên bị phát hiện thi hộ hoặc nhờ người khác thi hộ thì bị trừ bao nhiêu điểm rèn luyện?",
+          "top_k": 5,
+          "filter": {
+            "section": "danh_gia_ren_luyen"
+          }
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p108_p01",
+            "page": 108,
+            "score": 0.0323
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p115_p00",
+            "page": 115,
+            "score": 0.032
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p109_p00",
+            "page": 109,
+            "score": 0.0305
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p107_p00",
+            "page": 107,
+            "score": 0.0305
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p114_p02",
+            "page": 114,
+            "score": 0.0305
+          }
+        ],
+        "elapsed_ms": 5.22
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p108_p01"
+        ],
+        "char_count": 830,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "abstain",
+        "citations_returned": [],
+        "valid_citations": []
+      }
+    ]
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "question": "Điều kiện về chứng chỉ tiếng Anh chuẩn đầu ra đối với sinh viên đại học hệ chính quy khi xét tốt nghiệp là gì?",
+    "status": "answered",
+    "answer": "Để xét tốt nghiệp, sinh viên đại học hệ chính quy cần đạt chuẩn đầu ra Ngoại ngữ theo quy định của Học viện. Quy định này không áp dụng đối với sinh viên quốc tế và sinh viên ngành Ngôn ngữ Anh. [Trang 28]",
+    "citations": [
+      "so_tay_sinh_vien_k67_p028_p02"
+    ],
+    "valid_citations": [
+      "so_tay_sinh_vien_k67_p028_p02"
+    ],
+    "grade": 0,
+    "grade_reason": "Sai hoặc thiếu bằng chứng trọng yếu (Khớp 27.3%)",
+    "elapsed_ms": 1731.81,
+    "context_chars": 1436,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Điều kiện về chứng chỉ tiếng Anh chuẩn đầu ra đối với sinh viên đại học hệ chính quy khi xét tốt nghiệp là gì?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Điều kiện về chứng chỉ tiếng Anh chuẩn đầu ra đối với sinh viên đại học hệ chính quy khi xét tốt nghiệp là gì?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p028_p02",
+            "page": 28,
+            "score": 0.0323
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p02",
+            "page": 40,
+            "score": 0.0323
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p01",
+            "page": 40,
+            "score": 0.0323
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p039_p00",
+            "page": 39,
+            "score": 0.0308
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p03",
+            "page": 40,
+            "score": 0.0303
+          }
+        ],
+        "elapsed_ms": 71.4
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p028_p02",
+          "so_tay_sinh_vien_k67_p040_p02"
+        ],
+        "char_count": 1436,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "answered",
+        "citations_returned": [
+          "so_tay_sinh_vien_k67_p028_p02"
+        ],
+        "valid_citations": [
+          "so_tay_sinh_vien_k67_p028_p02"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "question": "Sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập?",
+    "status": "abstain",
+    "answer": "Tài liệu Sổ tay sinh viên K67 không cung cấp thông tin về sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập.",
+    "citations": [],
+    "valid_citations": [],
+    "grade": 0,
+    "grade_reason": "Từ chối nhầm câu có đáp án",
+    "elapsed_ms": 1871.54,
+    "context_chars": 1437,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Sinh viên đang trong thời gian bị kỷ luật từ mức nào trở lên thì không được xét cấp học bổng khuyến khích học tập?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p094_p01",
+            "page": 94,
+            "score": 0.0325
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p092_p02",
+            "page": 92,
+            "score": 0.031
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p093_p02",
+            "page": 93,
+            "score": 0.0308
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p092_p03",
+            "page": 92,
+            "score": 0.0307
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p091_p00",
+            "page": 91,
+            "score": 0.0292
+          }
+        ],
+        "elapsed_ms": 72.36
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p094_p01",
+          "so_tay_sinh_vien_k67_p092_p03"
+        ],
+        "char_count": 1437,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "abstain",
+        "citations_returned": [],
+        "valid_citations": []
+      }
+    ]
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "question": "Sinh viên học cùng lúc hai chương trình (học song bằng) được phép đăng ký chương trình thứ hai sớm nhất khi nào?",
+    "status": "answered",
+    "answer": "Sinh viên được phép đăng ký học chương trình thứ hai sớm nhất khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất. Ngoài ra, tại thời điểm đăng ký, sinh viên cần đáp ứng một trong hai điều kiện sau:\n* Học lực tính theo điểm trung bình tích lũy xếp loại khá trở lên và đáp ứng ngưỡng bảo đảm chất lượng của chương trình thứ hai trong năm tuyển sinh.\n* Học lực tính theo điểm trung bình tích lũy xếp loại trung bình và đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh.",
+    "citations": [
+      "so_tay_sinh_vien_k67_p033_p01"
+    ],
+    "valid_citations": [
+      "so_tay_sinh_vien_k67_p033_p01"
+    ],
+    "grade": 2,
+    "grade_reason": "Đúng và đầy đủ (Khớp 100.0% từ khóa chính)",
+    "elapsed_ms": 1983.79,
+    "context_chars": 1410,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Sinh viên học cùng lúc hai chương trình (học song bằng) được phép đăng ký chương trình thứ hai sớm nhất khi nào?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Sinh viên học cùng lúc hai chương trình (học song bằng) được phép đăng ký chương trình thứ hai sớm nhất khi nào?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p033_p01",
+            "page": 33,
+            "score": 0.0325
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p033_p00",
+            "page": 33,
+            "score": 0.0323
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p033_p02",
+            "page": 33,
+            "score": 0.032
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p016_p02",
+            "page": 16,
+            "score": 0.031
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p033_p03",
+            "page": 33,
+            "score": 0.0308
+          }
+        ],
+        "elapsed_ms": 40.92
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p033_p01",
+          "so_tay_sinh_vien_k67_p033_p00"
+        ],
+        "char_count": 1410,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "answered",
+        "citations_returned": [
+          "so_tay_sinh_vien_k67_p033_p01"
+        ],
+        "valid_citations": [
+          "so_tay_sinh_vien_k67_p033_p01"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "q31",
+    "split": "test",
+    "question": "Trong trường hợp nào giấy xác nhận ốm xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ?",
+    "status": "answered",
+    "answer": "Giấy xác nhận ốm để xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ trong các trường hợp sau:\n\n*   **Đối với việc xin hoãn thi do ốm:** Sinh viên cần nộp đơn xin chuyển lịch thi (Mẫu 12) hoặc đơn xin hoãn thi (Mẫu 8) gửi Ban Quản lý đào tạo trước thời gian thi. Sau đó, phải xuất trình giấy chứng nhận của Trạm y tế Học viện hoặc của Bệnh viện. [Trang 30]\n*   **Đối với việc nghỉ học tạm thời do ốm, thai sản hoặc tai nạn phải điều trị thời gian dài:** Sinh viên phải có giấy xác nhận của cơ quan y tế cấp quận/huyện trở lên kèm theo giấy nhập, xuất viện, hóa đơn viện phí và phải làm đơn xin rút các học phần đã đăng ký trong học kỳ. [Trang 31]",
+    "citations": [
+      "so_tay_sinh_vien_k67_p030_p02",
+      "so_tay_sinh_vien_k67_p031_p01"
+    ],
+    "valid_citations": [
+      "so_tay_sinh_vien_k67_p030_p02",
+      "so_tay_sinh_vien_k67_p031_p01"
+    ],
+    "grade": 1,
+    "grade_reason": "Đúng một phần (Khớp 63.6% từ khóa)",
+    "elapsed_ms": 6035.04,
+    "context_chars": 1335,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Trong trường hợp nào giấy xác nhận ốm xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Trong trường hợp nào giấy xác nhận ốm xin hoãn thi hoặc nghỉ học tạm thời được coi là hợp lệ?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p030_p02",
+            "page": 30,
+            "score": 0.0325
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p031_p01",
+            "page": 31,
+            "score": 0.0323
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p030_p03",
+            "page": 30,
+            "score": 0.0311
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p030_p01",
+            "page": 30,
+            "score": 0.0306
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p084_p00",
+            "page": 84,
+            "score": 0.0301
+          }
+        ],
+        "elapsed_ms": 3585.74
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p030_p02",
+          "so_tay_sinh_vien_k67_p031_p01"
+        ],
+        "char_count": 1335,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "answered",
+        "citations_returned": [
+          "so_tay_sinh_vien_k67_p030_p02",
+          "so_tay_sinh_vien_k67_p031_p01"
+        ],
+        "valid_citations": [
+          "so_tay_sinh_vien_k67_p030_p02",
+          "so_tay_sinh_vien_k67_p031_p01"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "q32",
+    "split": "test",
+    "question": "Quyết định kỷ luật đối với sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên phải gửi về cho ai và nơi nào?",
+    "status": "answered",
+    "answer": "Đối với quyết định kỷ luật sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên, 02 bản quyết định sẽ được gửi về địa phương nơi cư trú và gia đình của sinh viên để quản lý và giáo dục. Ngoài ra, quyết định kỷ luật cũng được gửi về Khoa quản lý sinh viên, Ban Quản lý đào tạo, sinh viên bị kỷ luật, lưu Hồ sơ sinh viên và lưu tại bộ phận thường trực Hội đồng kỷ luật sinh viên.",
+    "citations": [
+      "so_tay_sinh_vien_k67_p093_p02",
+      "so_tay_sinh_vien_k67_p092_p03"
+    ],
+    "valid_citations": [
+      "so_tay_sinh_vien_k67_p093_p02",
+      "so_tay_sinh_vien_k67_p092_p03"
+    ],
+    "grade": 2,
+    "grade_reason": "Đúng và đầy đủ (Khớp 100.0% từ khóa chính)",
+    "elapsed_ms": 8934.36,
+    "context_chars": 1397,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Quyết định kỷ luật đối với sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên phải gửi về cho ai và nơi nào?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Quyết định kỷ luật đối với sinh viên có hình thức từ đình chỉ học tập 01 năm trở lên phải gửi về cho ai và nơi nào?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p093_p02",
+            "page": 93,
+            "score": 0.0328
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p092_p03",
+            "page": 92,
+            "score": 0.032
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p094_p01",
+            "page": 94,
+            "score": 0.0318
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p094_p00",
+            "page": 94,
+            "score": 0.0294
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p031_p02",
+            "page": 31,
+            "score": 0.0288
+          }
+        ],
+        "elapsed_ms": 5847.87
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p093_p02",
+          "so_tay_sinh_vien_k67_p092_p03"
+        ],
+        "char_count": 1397,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "answered",
+        "citations_returned": [
+          "so_tay_sinh_vien_k67_p093_p02",
+          "so_tay_sinh_vien_k67_p092_p03"
+        ],
+        "valid_citations": [
+          "so_tay_sinh_vien_k67_p093_p02",
+          "so_tay_sinh_vien_k67_p092_p03"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "q33",
+    "split": "test",
+    "question": "Trong trường hợp đặc biệt, ai là người có thẩm quyền quyết định việc tổ chức thêm kỳ học hè?",
+    "status": "answered",
+    "answer": "Trong trường hợp đặc biệt, Trưởng ban Quản lý đào tạo sẽ đề nghị Giám đốc Học viện quyết định việc tổ chức thêm kỳ học hè.",
+    "citations": [
+      "so_tay_sinh_vien_k67_p013_p03"
+    ],
+    "valid_citations": [
+      "so_tay_sinh_vien_k67_p013_p03"
+    ],
+    "grade": 1,
+    "grade_reason": "Đúng một phần (Khớp 75.0% từ khóa)",
+    "elapsed_ms": 3380.55,
+    "context_chars": 1246,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Trong trường hợp đặc biệt, ai là người có thẩm quyền quyết định việc tổ chức thêm kỳ học hè?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Trong trường hợp đặc biệt, ai là người có thẩm quyền quyết định việc tổ chức thêm kỳ học hè?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p013_p03",
+            "page": 13,
+            "score": 0.0325
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p089_p00",
+            "page": 89,
+            "score": 0.0312
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p015_p02",
+            "page": 15,
+            "score": 0.0303
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p017_p01",
+            "page": 17,
+            "score": 0.029
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p031_p00",
+            "page": 31,
+            "score": 0.0284
+          }
+        ],
+        "elapsed_ms": 1916.49
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p013_p03",
+          "so_tay_sinh_vien_k67_p089_p00"
+        ],
+        "char_count": 1246,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "answered",
+        "citations_returned": [
+          "so_tay_sinh_vien_k67_p013_p03"
+        ],
+        "valid_citations": [
+          "so_tay_sinh_vien_k67_p013_p03"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "q34",
+    "split": "test",
+    "question": "Thời hạn mượn sách giáo trình chuyên ngành tối đa tại Thư viện Lương Định Của là bao nhiêu ngày cho mỗi lượt mượn?",
+    "status": "abstain",
+    "answer": "Tài liệu Sổ tay sinh viên K67 không cung cấp thông tin về thời hạn mượn sách giáo trình chuyên ngành tối đa tại Thư viện Lương Định Của.",
+    "citations": [],
+    "valid_citations": [],
+    "grade": 2,
+    "grade_reason": "Từ chối chính xác (Abstain đúng)",
+    "elapsed_ms": 3423.34,
+    "context_chars": 1434,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Thời hạn mượn sách giáo trình chuyên ngành tối đa tại Thư viện Lương Định Của là bao nhiêu ngày cho mỗi lượt mượn?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Thời hạn mượn sách giáo trình chuyên ngành tối đa tại Thư viện Lương Định Của là bao nhiêu ngày cho mỗi lượt mượn?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p008_p02",
+            "page": 8,
+            "score": 0.0315
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p016_p02",
+            "page": 16,
+            "score": 0.0315
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p036_p02",
+            "page": 36,
+            "score": 0.0315
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p030_p01",
+            "page": 30,
+            "score": 0.0304
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p033_p02",
+            "page": 33,
+            "score": 0.0302
+          }
+        ],
+        "elapsed_ms": 1989.25
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p008_p02",
+          "so_tay_sinh_vien_k67_p016_p02"
+        ],
+        "char_count": 1434,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "abstain",
+        "citations_returned": [],
+        "valid_citations": []
+      }
+    ]
+  },
+  {
+    "query_id": "q35",
+    "split": "test",
+    "question": "Sinh viên đạt chứng chỉ quốc tế IELTS 6.5 trở lên thì được miễn giảm học phần tiếng Anh nào và tương đương với điểm chữ gì?",
+    "status": "abstain",
+    "answer": "Tài liệu Sổ tay sinh viên K67 không cung cấp thông tin về việc sinh viên đạt chứng chỉ quốc tế IELTS 6.5 trở lên thì được miễn giảm học phần tiếng Anh nào và tương đương với điểm chữ gì.",
+    "citations": [],
+    "valid_citations": [],
+    "grade": 2,
+    "grade_reason": "Từ chối chính xác (Abstain đúng)",
+    "elapsed_ms": 3653.8,
+    "context_chars": 1151,
+    "events": [
+      {
+        "event": "thought",
+        "detail": "Khởi tạo tìm kiếm bằng chứng cho câu hỏi: 'Sinh viên đạt chứng chỉ quốc tế IELTS 6.5 trở lên thì được miễn giảm học phần tiếng Anh nào và tương đương với điểm chữ gì?'"
+      },
+      {
+        "event": "tool_call",
+        "tool": "search",
+        "params": {
+          "query": "Sinh viên đạt chứng chỉ quốc tế IELTS 6.5 trở lên thì được miễn giảm học phần tiếng Anh nào và tương đương với điểm chữ gì?",
+          "top_k": 5,
+          "filter": null
+        },
+        "retrieved_count": 5,
+        "top_candidates": [
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p02",
+            "page": 40,
+            "score": 0.0328
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p03",
+            "page": 40,
+            "score": 0.0318
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p00",
+            "page": 40,
+            "score": 0.0315
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p040_p01",
+            "page": 40,
+            "score": 0.0313
+          },
+          {
+            "id": "so_tay_sinh_vien_k67_p023_p01",
+            "page": 23,
+            "score": 0.0299
+          }
+        ],
+        "elapsed_ms": 1928.86
+      },
+      {
+        "event": "context_packed",
+        "context_ids": [
+          "so_tay_sinh_vien_k67_p040_p02",
+          "so_tay_sinh_vien_k67_p040_p03"
+        ],
+        "char_count": 1151,
+        "budget": 1500
+      },
+      {
+        "event": "decision",
+        "status": "abstain",
+        "citations_returned": [],
+        "valid_citations": []
+      }
+    ]
+  }
+]

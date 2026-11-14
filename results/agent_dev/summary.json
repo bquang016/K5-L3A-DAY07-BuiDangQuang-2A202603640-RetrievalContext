@@ -1,0 +1,22 @@
+{
+  "split": "dev",
+  "model": "Gemini 2.5 Flash (Google)",
+  "total_queries": 25,
+  "tool_use": "25/25 (100.0%)",
+  "grounded_answer": {
+    "grade_0": 9,
+    "grade_1": 3,
+    "grade_2": 8,
+    "average_score": 0.95,
+    "max_score": 2.0
+  },
+  "citation": {
+    "answered_with_citations": "11/20",
+    "citation_validity_rate": "11/11 (100.0%)"
+  },
+  "abstention": {
+    "correct_abstention": "5/5 (100.0%)",
+    "false_rejections": "9/20"
+  },
+  "median_ms": 1606.36
+}

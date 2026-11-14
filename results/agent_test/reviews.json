@@ -1,0 +1,74 @@
+[
+  {
+    "query_id": "q16",
+    "answer_grade": 0,
+    "abstention_correct": null,
+    "citation_support": []
+  },
+  {
+    "query_id": "q17",
+    "answer_grade": 0,
+    "abstention_correct": null,
+    "citation_support": []
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 0,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ]
+  },
+  {
+    "query_id": "q19",
+    "answer_grade": 0,
+    "abstention_correct": null,
+    "citation_support": []
+  },
+  {
+    "query_id": "q20",
+    "answer_grade": 2,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ]
+  },
+  {
+    "query_id": "q31",
+    "answer_grade": 1,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ]
+  },
+  {
+    "query_id": "q32",
+    "answer_grade": 2,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ]
+  },
+  {
+    "query_id": "q33",
+    "answer_grade": 1,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ]
+  },
+  {
+    "query_id": "q34",
+    "answer_grade": 2,
+    "abstention_correct": true,
+    "citation_support": []
+  },
+  {
+    "query_id": "q35",
+    "answer_grade": 2,
+    "abstention_correct": true,
+    "citation_support": []
+  }
+]
