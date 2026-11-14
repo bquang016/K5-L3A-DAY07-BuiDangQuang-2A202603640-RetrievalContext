@@ -20,7 +20,7 @@ from src.retrievers import Bm25Retriever, DenseRetriever, HybridRetriever
 from src.embeddings import EmbeddingService
 from src.advanced.agent import AdvancedAgenticRAG
 
-PORT = 8083
+PORT = int(os.getenv("PORT", 8085))
 
 print("[Web Server] Đang tải dữ liệu K67 và khởi tạo Retrievers...")
 chunks_k67 = json.load(open(ROOT_DIR / "data/chunks.json", encoding="utf-8"))
@@ -224,6 +224,7 @@ class AgenticHandler(http.server.SimpleHTTPRequestHandler):
 
 
 def run_server():
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("", PORT), AgenticHandler) as httpd:
         print(f"\n=======================================================")
         print(f"🎉 GIAO DIỆN AGENTIC RAG ĐANG CHẠY TẠI:")
