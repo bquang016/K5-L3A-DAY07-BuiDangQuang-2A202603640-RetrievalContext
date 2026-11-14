@@ -20,7 +20,7 @@ from src.retrievers import Bm25Retriever, DenseRetriever, HybridRetriever
 from src.embeddings import EmbeddingService
 from src.advanced.agent import AdvancedAgenticRAG
 
-PORT = int(os.getenv("PORT", 8085))
+PORT = int(os.getenv("PORT", 8088))
 
 print("[Web Server] Đang tải dữ liệu K67 và khởi tạo Retrievers...")
 chunks_k67 = json.load(open(ROOT_DIR / "data/chunks.json", encoding="utf-8"))
@@ -185,13 +185,15 @@ class AgenticHandler(http.server.SimpleHTTPRequestHandler):
                         {
                             "event": "tool_call",
                             "tool": "search_vinamilk_multimodal",
-                            "latency_ms": vnm_res["latency_tool_ms"],
+                            "elapsed_ms": vnm_res["latency_tool_ms"],
+                            "retrieved_count": len(top_candidates),
                             "top_candidates": top_candidates
                         },
                         {
                             "event": "context_packed",
-                            "packed_chars": len(vnm_res["context_packed"]),
-                            "budget_limit": vnm_agent.budget,
+                            "char_count": len(vnm_res["context_packed"]),
+                            "budget": vnm_agent.budget,
+                            "context_ids": vnm_res["candidates"],
                             "chunks_count": len(vnm_res["candidates"])
                         }
                     ],

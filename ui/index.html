@@ -508,18 +508,18 @@
                   </div>
                   <div class="flex items-center justify-between bg-zinc-900/70 p-2 rounded-lg border border-zinc-800">
                     <span class="text-zinc-400">⚡ Độ trễ chi tiết:</span>
-                    <span class="text-zinc-300 font-mono">Tool: <strong class="text-emerald-400">${toolEvent.elapsed_ms || 0}ms</strong> | Tổng: <strong class="text-teal-400">${latency}ms</strong></span>
+                    <span class="text-zinc-300 font-mono">Tool: <strong class="text-emerald-400">${toolEvent.elapsed_ms || toolEvent.latency_ms || 0}ms</strong> | Tổng: <strong class="text-teal-400">${latency}ms</strong></span>
                   </div>
                   <div class="flex items-center justify-between bg-zinc-900/70 p-2 rounded-lg border border-zinc-800">
                     <span class="text-zinc-400">📦 Context đã đóng gói:</span>
-                    <span class="text-zinc-300 font-mono">${contextEvent.char_count || 0} / 1500 ký tự (${(contextEvent.context_ids || []).length} chunks)</span>
+                    <span class="text-zinc-300 font-mono">${contextEvent.char_count || contextEvent.packed_chars || 0} / ${contextEvent.budget || contextEvent.budget_limit || 1500} ký tự (${(contextEvent.context_ids || []).length || (contextEvent.chunks_count || 0)} chunks)</span>
                   </div>
                 </div>
 
                 <!-- Candidates trích xuất -->
                 <div class="bg-zinc-900/70 p-2.5 rounded-lg border border-zinc-800 space-y-1.5">
                   <div class="flex items-center justify-between text-zinc-400 text-[11px]">
-                    <span>🎯 Top Candidates tìm kiếm (${toolEvent.retrieved_count || 0} chunks):</span>
+                    <span>🎯 Top Candidates tìm kiếm (${toolEvent.retrieved_count || candidates.length || 0} chunks):</span>
                   </div>
                   <div class="flex flex-wrap gap-1.5 pt-1">
                     ${candidatesHtml}
